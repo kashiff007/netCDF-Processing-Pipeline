@@ -6,22 +6,21 @@ from itertools import count, tee, islice
 import math
 
 
-#window_size = 100
-#stride = 20
-
 fOut = open("result.txt", "w")
 x = raw_input("Enter your file name: ")
 file = open(x,"r")
 
-tmin = float(7)
-tmax = float(15)
+tmin = float(2) #time of min temp
+tmax = float(14) #time od max temp
+Tmin = 5 #min temp at tmin
+Tmax = 20 #max temp at tmax
 data = []
 for line in file:
 
         count = 0
         line = line.split("\t")
-        line1 = float(line[0])
-        line2 = float(line[1])
+        line1 = float(line[0]) # Tmin
+        line2 = float(line[1]) # Tmax
 #       print (line1), line2
 #       data.append(line)
 #       print data
